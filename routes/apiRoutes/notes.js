@@ -1,21 +1,47 @@
-const router = require('express').Router();
-const { addNewNote, validateNote } = require('../../lib/notes');
-const { notes } = require('../../data/animals');
+const fs = require('fs');
+const path = require('path');
+const myNotes = require('./db/db.json');
 
-router.get('/notes', (req, res) => {
-  let results = notes;
-});
+module.exports = app => {
 
-router.post('/notes', (req, res) => {
-  // set id based on what the next index of the array will be
-  req.body.title = notes.length.toString();
+  fs.readFile('db/db.json', 'utf8', (err, data) => {
+    if (err) throw err;
 
-  if (!validateNote(req.body)) {
-    res.status(400).send('The note is field is empty.');
-  } else {
-    const note = createNewNote(req.body, notes);
-    res.json(note);
-  }
-});
+    var notes = JSON.parse(data);
+  
 
-module.exports = router;
+    app.get('/notes', (req, res) => {
+      let results = notes;
+    });
+
+    app.post('api/notes', (req, res) => {
+
+      let newNote = req.body;
+      notes.push(newNote);
+      saveNote();
+      return console.log('New note added');
+    });
+
+    app.get('/api/notes/:id', (req, res) => {
+      res.json(notes[req.params.id]);
+    });
+
+    app.delete('/api/notes/:id', (req, res) => {
+      notes.splice(req.params.id, 1);
+      updateNotes();
+    });
+
+    // Insert notes to page
+    app.get('/notes', (req, res) => {
+      res.sendFile(path.join(__dirname, "../public/notes.html"));
+    });
+
+    // Updates json file when note is added/deleted
+    function updateNotes() {
+      fs.writeFile('db/db.json', JSON.stringify(notes, '\t'), err => {
+        if (err) throw err;
+        return true;
+      });
+    }
+  });
+}
