@@ -1,33 +1,22 @@
-[
-  6,
-  {
-    "title": "Note Taker",
-    "text": "poop",
-    "id": 0
-  },
-  {
-    "title": "POOP",
-    "text": "poop",
-    "id": 1
-  },
-  {
-    "title": "POOP",
-    "text": "poop",
-    "id": 2
-  },
-  {
-    "title": "poop",
-    "text": "poop",
-    "id": 3
-  },
-  {
-    "title": "poop",
-    "text": "poop",
-    "id": 4
-  },
-  {
-    "title": "asdfasdf",
-    "text": "asdf",
-    "id": 5
-  }
-]
+{
+  "notes": [
+    {
+      "title": "Test 1",
+      "text": "This is a test"
+    },
+    {
+      "title": "Test 2",
+      "text": "This is also a test"
+    },
+    {
+      "title": "This is a test",
+      "text": "just a test",
+      "id": "2"
+    },
+    {
+      "title": "Testing",
+      "text": "did we get it?\n",
+      "id": "3"
+    }
+  ]
+}
