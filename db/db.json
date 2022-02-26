@@ -1,22 +1,19 @@
 {
   "notes": [
     {
-      "title": "Test 1",
-      "text": "This is a test"
+      "title": "Note #1",
+      "text": "This should save!",
+      "id": "0"
     },
     {
-      "title": "Test 2",
-      "text": "This is also a test"
+      "title": "Note #2",
+      "text": "This should, also, save!\n",
+      "id": "1"
     },
     {
-      "title": "This is a test",
-      "text": "just a test",
+      "title": "Note #3",
+      "text": "And...here we save, yet another note!",
       "id": "2"
-    },
-    {
-      "title": "Testing",
-      "text": "did we get it?\n",
-      "id": "3"
     }
   ]
 }

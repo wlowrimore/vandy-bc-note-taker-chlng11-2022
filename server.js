@@ -6,6 +6,8 @@ const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 const fs = require('fs');
 const path = require('path');
+const req = require('express/lib/request');
+const res = require('express/lib/response');
 
 const app = express();
 app.use(express.static('public'));
