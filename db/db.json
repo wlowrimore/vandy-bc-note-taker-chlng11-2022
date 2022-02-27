@@ -2,18 +2,8 @@
   "notes": [
     {
       "title": "Note #1",
-      "text": "This should save!",
+      "text": "Delete Works!!!",
       "id": "0"
-    },
-    {
-      "title": "Note #2",
-      "text": "This should, also, save!\n",
-      "id": "1"
-    },
-    {
-      "title": "Note #3",
-      "text": "And...here we save, yet another note!",
-      "id": "2"
     }
   ]
 }

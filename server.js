@@ -1,7 +1,6 @@
 const express = require('express');
 
 const PORT = process.env.PORT || 3001;
-
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 const fs = require('fs');
@@ -11,7 +10,6 @@ const res = require('express/lib/response');
 
 const app = express();
 app.use(express.static('public'));
-
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
