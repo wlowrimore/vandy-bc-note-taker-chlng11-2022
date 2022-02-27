@@ -3,10 +3,11 @@ const express = require('express');
 const PORT = process.env.PORT || 3001;
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
-const fs = require('fs');
-const path = require('path');
 const req = require('express/lib/request');
 const res = require('express/lib/response');
+const fs = require('fs');
+const path = require('path');
+
 
 const app = express();
 app.use(express.static('public'));

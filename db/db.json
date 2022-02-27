@@ -1,9 +1,14 @@
 {
   "notes": [
     {
-      "title": "Note #1",
-      "text": "Delete Works!!!",
+      "title": "Events 2/27/2022",
+      "text": "Get Gas\nPay Bills\nGo To Grocery Store",
       "id": "0"
+    },
+    {
+      "title": "Grocery List",
+      "text": "Milk ( D and 2% )\nCoffee Creamer\nEggs\nCheese (Block and Shredded)\nBread\nLunch Meat\n",
+      "id": "1"
     }
   ]
 }
